@@ -3,6 +3,8 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 
+import User from './models/userModel.js';
+
 dotenv.config();
 
 const app = express();
@@ -23,3 +25,13 @@ mongoose
     // Starting server
     app.listen(PORT, () => console.log(`Server is running on port ${PORT}...`));
   });
+
+// Routes
+app.get('/', (req, res) => res.send('API is running...'));
+
+// GET: all users
+app.get('/api/users', async (req, res) => {
+  let users = await User.find({});
+
+  res.json(users);
+});
