@@ -10,12 +10,26 @@ mongoose
     useUnifiedTopology: true,
   })
   .then((response) => {
-    let users = {
-      name: 'Tom',
-      age: 30,
-      email: 'tom@email.com',
-      password: 'aa',
-    };
+    let users = [
+      {
+        name: 'Tomas',
+        age: 30,
+        email: 'tomas@email.com',
+        password: 'tt',
+      },
+      {
+        name: 'Augustinas',
+        age: 30,
+        email: 'augustinas@email.com',
+        password: 'aa',
+      },
+      {
+        name: 'Rasa',
+        age: 21,
+        email: 'rasa@email.com',
+        password: 'rr',
+      },
+    ];
 
     User.insertMany(users);
 
