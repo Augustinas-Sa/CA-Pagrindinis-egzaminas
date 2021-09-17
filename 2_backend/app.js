@@ -35,3 +35,14 @@ app.get('/api/users', async (req, res) => {
 
   res.json(users);
 });
+
+// POST: update user
+app.post('/api/users/post', (req, res) => {});
+
+// PUT: add new user
+app.put('/api/users/add', (req, res) => {});
+
+// DELETE: user based on id
+app.delete('/api/users/delete/:id', (req, res) => {
+  const id = req.params._id;
+});
