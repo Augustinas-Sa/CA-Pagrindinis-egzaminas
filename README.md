@@ -37,4 +37,7 @@ package.json tarp "scripts", eilutės "test": "echo \"Error: no test specified\"
 Komandos paleidimas:
 -- npm run nodemon
 
+Seeder.js failo paleidimas:
+-- node seeder.js
+
 -----------------------------------------------------------------------------------------------------
