@@ -5,6 +5,12 @@
   margin-bottom: 40px;
 }
 
+.users-cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .card_shadow {
   width: 200px;
   padding: 20px;
