@@ -1,0 +1,40 @@
+.new-user-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.submit-btn {
+  margin-top: 20px;
+
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.submit-btn:hover {
+  background-color: rgb(6, 192, 6);
+  color: white;
+  cursor: pointer;
+}
+
+.form-input {
+  margin-bottom: 15px;
+  padding: 5px 7px;
+  font-size: 1em;
+  color: rgb(61, 61, 61);
+  border-radius: 10px;
+}
+
+.card_shadow {
+  margin-top: 30px;
+  width: 400px;
+  padding: 20px;
+  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%),
+    0 0 0 1px rgb(10 10 10 / 2%);
+  border-radius: 10px;
+}
