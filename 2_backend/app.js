@@ -37,12 +37,50 @@ app.get('/api/users', async (req, res) => {
 });
 
 // POST: update user
-app.post('/api/users/post', (req, res) => {});
+app.post('/api/users/post', (req, res) => {
+  let user = req.body;
+
+  User.find().then((result) => {
+    const userExists = result.some(
+      (userFromDB) => userFromDB.email === user.email
+    );
+
+    if (userExists) {
+      res.json({
+        registrationStatus: 'failed',
+        message: 'User with given email already exists',
+      });
+    } else {
+      user.teams = [];
+
+      const newUser = new User(user);
+
+      newUser.save().then((result) => {
+        let { _id } = result;
+        res.json({
+          registrationStatus: 'success',
+          userId: _id,
+        });
+      });
+    }
+  });
+});
 
 // PUT: add new user
 app.put('/api/users/add', (req, res) => {});
 
 // DELETE: user based on id
 app.delete('/api/users/delete/:id', (req, res) => {
-  const id = req.params._id;
+  // const id = req.params._id;
+  let { userID } = req.body;
+
+  let user = User.findById(userId);
+  let userToDeleteIndex = user.users.findIndex(
+    (user) => '' + user._id === '' + userID
+  );
+  console.log(userToDeleteIndex);
+  // user.user.splice(userToDeleteIndex, 0);
+
+  console.log('hello');
+  User.findByIdAndUpdate(userID, user).then((result) => res.json(user));
 });
