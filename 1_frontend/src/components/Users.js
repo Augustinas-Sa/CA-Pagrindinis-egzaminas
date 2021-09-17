@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Users.css';
 import ButtonDelete from './ButtonDelete';
+import UpdateButton from './UpdateButton';
+import NewForm from './NewForm';
 
 const GET_ALL_USERS = 'http://localhost:5000/api/users';
 
@@ -28,10 +30,12 @@ const Users = () => {
               <p>Amžius: {item.age}</p>
               <p>El. paštas: {item.email}</p>
               <p>Slaptažodis: {item.password}</p>
+              <UpdateButton />
               <ButtonDelete />
             </div>
           ))}
         </div>
+        <NewForm />
       </section>
     </main>
   );
