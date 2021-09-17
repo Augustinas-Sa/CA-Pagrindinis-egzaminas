@@ -7,13 +7,16 @@
 
 .users-cards {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
 }
 
 .card_shadow {
-  width: 200px;
+  margin-top: 30px;
+  width: 400px;
   padding: 20px;
   box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%),
     0 0 0 1px rgb(10 10 10 / 2%);
+  border-radius: 10px;
 }
