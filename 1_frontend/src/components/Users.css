@@ -1,0 +1,13 @@
+.section-name {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.card_shadow {
+  width: 200px;
+  padding: 20px;
+  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%),
+    0 0 0 1px rgb(10 10 10 / 2%);
+}
